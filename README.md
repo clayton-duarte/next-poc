@@ -1,4 +1,4 @@
-#poc
+# Star Wars quiz
 
 ## Instructions:
 
