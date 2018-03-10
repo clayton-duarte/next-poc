@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
 const Content = styled.div`
+max-width: ${props => props.show ? '30vw' : 'calc(100vw -40px)'};
+overflow: ${props => props.show ? 'hidden' : 'auto'};
 box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 font-family: AnakinMono, sans-serif;
 border: 2px solid yellow;
+transition: .3s ease;
 letter-spacing: 1px;
 margin-bottom: 20px;
 position: relative;
 font-weight: 300;
 background: #222;
+min-width: 30vw;
 font-size: 20px;
 padding: 20px;
 @font-face {

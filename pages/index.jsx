@@ -50,7 +50,7 @@ export default class extends Component {
         return (
             <Grid>
                 <Card>
-                    <Content>
+                    <Content show={this.state.show}>
                         <Cover show={this.state.show} onClick={this.handleClickShow}/>
                         <Title show={this.state.show}>{this.state.planet.name}</Title>
                         <Hr/>

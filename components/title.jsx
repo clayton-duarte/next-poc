@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Title = styled.h1`
-pointer-events: ${props => props.show ? 'auto' : 'none' };
+pointer-events: ${props => props.show ? 'none' : 'auto' };
 top: ${props => props.show ? 'calc(50% - 24px)' : '20px'};
 font-family: StarJedi, sans-serif;
 text-transform: uppercase;
