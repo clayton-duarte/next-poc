@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Content = styled.div`
-max-width: ${props => props.show ? '30vw' : 'calc(100vw -40px)'};
+max-width: ${props => props.show ? '30vw' : '100vw'};
 overflow: ${props => props.show ? 'hidden' : 'auto'};
 box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 font-family: AnakinMono, sans-serif;
