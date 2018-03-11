@@ -10,7 +10,7 @@ position: absolute;
 text-align: center;
 font-weight: 400;
 margin: 0 -20px;
-font-size: 48px;
+font-size: 2.5em;
 display: block;
 width: 100%;
 color: #222;

@@ -8,9 +8,8 @@ import Hr from '../components/divider';
 import Grid from '../components/grid';
 import Card from '../components/card';
 import Info from '../components/info';
-
+import Head from 'next/head';
 import axios from 'axios';
-// import { getPlanet } from '../actions';
 
 export default class extends Component {
     constructor(props) {
@@ -49,7 +48,12 @@ export default class extends Component {
     render() {
         return (
             <Grid>
+                <Head>
+                    <title>My Star Wars Quiz</title>
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+                </Head>
                 <Card>
+                    <Title>quiz</Title>
                     <Content show={this.state.show}>
                         <Cover show={this.state.show} onClick={this.handleClickShow}/>
                         <Title show={this.state.show}>{this.state.planet.name}</Title>
