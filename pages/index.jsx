@@ -49,7 +49,9 @@ export default class extends Component {
         return (
             <Grid>
                 <Head>
-                    <title>My Star Wars Quiz</title>
+                    <title>My Star Wars Quiz
+                        { this.state.planet ? ` - ${this.state.planet.name}` : null }
+                    </title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
                 </Head>
                 <Card>
