@@ -20,6 +20,7 @@ export default class extends Component {
             page: 1,
         }
         this.getPlanet = planet => {
+            this.setState({ planet: { name: 'warping...' } });
             axios.get(`https://swapi.co/api/planets/${planet}/`)
                 .then( response => {
                     this.setState({ planet: response.data })
@@ -37,7 +38,6 @@ export default class extends Component {
         this.handleClickNext = () => {
             this.newPlanet();
             this.setState({ show: true });
-            console.log(this.state.planet)
         }
     }
 
@@ -55,7 +55,6 @@ export default class extends Component {
                     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
                 </Head>
                 <Card>
-                    <Title>quiz</Title>
                     <Content show={this.state.show}>
                         <Cover show={this.state.show} onClick={this.handleClickShow}/>
                         <Title show={this.state.show}>{this.state.planet.name}</Title>
@@ -64,11 +63,7 @@ export default class extends Component {
                         <Info><span>Climate:</span> <small>{this.state.planet.climate}</small></Info>
                         <Info><span>Terrain:</span> <small>{this.state.planet.terrain}</small></Info>
                         <br/>
-                        {
-                            this.state.planet.films ? 
-                            <Footer>Featured in {this.state.planet.films.length} films</Footer>
-                            : null
-                        }
+                        <Footer>Featured in {this.state.planet.films ? this.state.planet.films.length : null} films</Footer>
                     </Content>
                     <Button 
                         onClick={this.state.show ? this.handleClickShow : this.handleClickNext }>
